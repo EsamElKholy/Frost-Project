@@ -3,7 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Main", "Main\Main.vcxproj", "{4BB4F37E-3D82-409A-AC16-6D7BC8916CFF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Frost Engine", "Frost Engine\Frost Engine.vcxproj", "{D7BA1B87-2C7C-44E7-90C2-5998E188F298}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Frost Platform", "Frost Platform\Frost Platform.vcxproj", "{182C8CDC-B1C6-4F56-81ED-DC2C26278847}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DD070E51-7C5C-4B25-B05F-0CE96908A00C} = {DD070E51-7C5C-4B25-B05F-0CE96908A00C}
+		{D7BA1B87-2C7C-44E7-90C2-5998E188F298} = {D7BA1B87-2C7C-44E7-90C2-5998E188F298}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Frost Sandbox", "Frost Sandbox\Frost Sandbox.vcxproj", "{DD070E51-7C5C-4B25-B05F-0CE96908A00C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D7BA1B87-2C7C-44E7-90C2-5998E188F298} = {D7BA1B87-2C7C-44E7-90C2-5998E188F298}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +24,30 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4BB4F37E-3D82-409A-AC16-6D7BC8916CFF}.Debug|x64.ActiveCfg = Debug|x64
-		{4BB4F37E-3D82-409A-AC16-6D7BC8916CFF}.Debug|x64.Build.0 = Debug|x64
-		{4BB4F37E-3D82-409A-AC16-6D7BC8916CFF}.Debug|x86.ActiveCfg = Debug|Win32
-		{4BB4F37E-3D82-409A-AC16-6D7BC8916CFF}.Debug|x86.Build.0 = Debug|Win32
-		{4BB4F37E-3D82-409A-AC16-6D7BC8916CFF}.Release|x64.ActiveCfg = Release|x64
-		{4BB4F37E-3D82-409A-AC16-6D7BC8916CFF}.Release|x64.Build.0 = Release|x64
-		{4BB4F37E-3D82-409A-AC16-6D7BC8916CFF}.Release|x86.ActiveCfg = Release|Win32
-		{4BB4F37E-3D82-409A-AC16-6D7BC8916CFF}.Release|x86.Build.0 = Release|Win32
+		{D7BA1B87-2C7C-44E7-90C2-5998E188F298}.Debug|x64.ActiveCfg = Debug|x64
+		{D7BA1B87-2C7C-44E7-90C2-5998E188F298}.Debug|x64.Build.0 = Debug|x64
+		{D7BA1B87-2C7C-44E7-90C2-5998E188F298}.Debug|x86.ActiveCfg = Debug|Win32
+		{D7BA1B87-2C7C-44E7-90C2-5998E188F298}.Debug|x86.Build.0 = Debug|Win32
+		{D7BA1B87-2C7C-44E7-90C2-5998E188F298}.Release|x64.ActiveCfg = Release|x64
+		{D7BA1B87-2C7C-44E7-90C2-5998E188F298}.Release|x64.Build.0 = Release|x64
+		{D7BA1B87-2C7C-44E7-90C2-5998E188F298}.Release|x86.ActiveCfg = Release|Win32
+		{D7BA1B87-2C7C-44E7-90C2-5998E188F298}.Release|x86.Build.0 = Release|Win32
+		{182C8CDC-B1C6-4F56-81ED-DC2C26278847}.Debug|x64.ActiveCfg = Debug|x64
+		{182C8CDC-B1C6-4F56-81ED-DC2C26278847}.Debug|x64.Build.0 = Debug|x64
+		{182C8CDC-B1C6-4F56-81ED-DC2C26278847}.Debug|x86.ActiveCfg = Debug|Win32
+		{182C8CDC-B1C6-4F56-81ED-DC2C26278847}.Debug|x86.Build.0 = Debug|Win32
+		{182C8CDC-B1C6-4F56-81ED-DC2C26278847}.Release|x64.ActiveCfg = Release|x64
+		{182C8CDC-B1C6-4F56-81ED-DC2C26278847}.Release|x64.Build.0 = Release|x64
+		{182C8CDC-B1C6-4F56-81ED-DC2C26278847}.Release|x86.ActiveCfg = Release|Win32
+		{182C8CDC-B1C6-4F56-81ED-DC2C26278847}.Release|x86.Build.0 = Release|Win32
+		{DD070E51-7C5C-4B25-B05F-0CE96908A00C}.Debug|x64.ActiveCfg = Debug|x64
+		{DD070E51-7C5C-4B25-B05F-0CE96908A00C}.Debug|x64.Build.0 = Debug|x64
+		{DD070E51-7C5C-4B25-B05F-0CE96908A00C}.Debug|x86.ActiveCfg = Debug|Win32
+		{DD070E51-7C5C-4B25-B05F-0CE96908A00C}.Debug|x86.Build.0 = Debug|Win32
+		{DD070E51-7C5C-4B25-B05F-0CE96908A00C}.Release|x64.ActiveCfg = Release|x64
+		{DD070E51-7C5C-4B25-B05F-0CE96908A00C}.Release|x64.Build.0 = Release|x64
+		{DD070E51-7C5C-4B25-B05F-0CE96908A00C}.Release|x86.ActiveCfg = Release|Win32
+		{DD070E51-7C5C-4B25-B05F-0CE96908A00C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
