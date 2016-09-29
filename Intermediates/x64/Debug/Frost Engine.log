@@ -1,4 +1,0 @@
-﻿  Unity Build.cpp
-  SOIL.lib(image_DXT.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
-LIB : fatal error C1905: Front end and back end not compatible (must target same processor).
-LINK : fatal error LNK1257: code generation failed
