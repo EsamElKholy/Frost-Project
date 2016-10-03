@@ -124,6 +124,7 @@ public:
 
 	void RenderShapes(OpenGLShader *shader);
 	void RenderShape(Renderable *renderable, OpenGLShader *shader, SimpleLamp *lamp = NULL);
+	void RenderScreen(GLShape *screenQuad, Texture *screenBuffer, OpenGLShader *shader, int mode);
 
 	void Update();
 

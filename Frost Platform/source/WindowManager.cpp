@@ -43,7 +43,7 @@ bool WindowManager::CreateOpenGLWindow(int width, int height, char *title)
 	}
 
 	glViewport(0, 0, width, height);
-	glEnable(GL_DEPTH_TEST);
+	//glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
 	/*
 	glFrontFace(GL_CW);
@@ -90,4 +90,9 @@ void WindowManager::Destroy()
 void WindowManager::ResetClearColor()
 {
 	glClearColor(0, 0, 0, 1);
+}
+
+void WindowManager::ClearWindow()
+{
+	glClear(GL_COLOR_BUFFER_BIT);	 
 }

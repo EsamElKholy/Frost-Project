@@ -84,11 +84,13 @@ vec4 calcDirectional(DirectionalLight dir, vec3 normal, vec3 viewDir)
 	float diffuseAngle = max(dot(norm, lightDir), 0.0f);
 	vec4 diffCol = diffuseAngle * dir.Diffuse * texture(objMaterial.Diffuse, frag_texcoord);
 
-	vec3 reflectionDir = normalize(reflect(-lightDir, norm));
-	float spec = pow(max(dot(viewDir, reflectionDir), 0.0f), 32.0f);
+	//vec3 reflectionDir = normalize(reflect(-lightDir, norm));
+	vec3 halfway = normalize(viewDir + lightDir);
+	
+	float spec = pow(max(dot(norm, halfway), 0.0f), 32.0f);
 	vec4 specCol = spec * dir.Specular * objMaterial.Shininess * texture(objMaterial.Specular, frag_texcoord);
 
-	vec4 finalLight = ambCol + ((diffCol + specCol));
+	vec4 finalLight = ambCol + (diffCol + specCol);
 
 	return finalLight;
 }
@@ -103,13 +105,16 @@ vec4 calcPoint(PointLight pointLight, vec3 normal, vec3 fragPos, vec3 viewDir)
 	float diffuseAngle = max(dot(norm, lightDir), 0.0f);
 	vec4 diffCol = diffuseAngle * pointLight.Diffuse * texture(objMaterial.Diffuse, frag_texcoord);
 
-	vec3 reflectionDir = normalize(reflect(-lightDir, norm));
-	float spec = pow(max(dot(viewDir, reflectionDir), 0.0f), 32.0f);
+	//vec3 reflectionDir = normalize(reflect(-lightDir, norm));
+	vec3 halfway = normalize(viewDir + lightDir);
+	
+	float spec = pow(max(dot(norm, halfway), 0.0f), 32.0f);
 	vec4 specCol = spec * pointLight.Specular * objMaterial.Shininess * texture(objMaterial.Specular, frag_texcoord);
 	
+	float dist = length(pointLight.Position - fragPos);
 	float atten = 1.0f / (pointLight.Atten.Constant
-						 + (pointLight.Atten.Linear * length(pointLight.Position - fragPos))
-						 + (pointLight.Atten.Quadratic * pow(length(pointLight.Position - fragPos), 2.0f)));
+						 + (pointLight.Atten.Linear * dist)
+						 + (pointLight.Atten.Quadratic * pow(dist, 2.0f)));
 
 	vec4 finalLight = (atten * ambCol) + (atten * diffCol) + (atten * specCol);
 
@@ -126,13 +131,16 @@ vec4 calcSpot(SpotLight spotLight, vec3 normal, vec3 fragPos, vec3 viewDir)
 	float diffuseAngle = max(dot(norm, lightDir), 0.0f);
 	vec4 diffCol = diffuseAngle * spotLight.Diffuse * texture(objMaterial.Diffuse, frag_texcoord);
 
-	vec3 reflectionDir = normalize(reflect(-lightDir, norm));
-	float spec = pow(max(dot(viewDir, reflectionDir), 0.0f), 32.0f);
+	//vec3 reflectionDir = normalize(reflect(-lightDir, norm));
+	vec3 halfway = normalize(viewDir + lightDir);
+	
+	float spec = pow(max(dot(norm, halfway), 0.0f), 32.0f);
 	vec4 specCol = spec * spotLight.Specular * objMaterial.Shininess * texture(objMaterial.Specular, frag_texcoord);
 	
+	float dist = length(spotLight.Position - fragPos);
 	float atten = 1.0f / (spotLight.Atten.Constant
-						 + (spotLight.Atten.Linear * length(spotLight.Position - fragPos))
-						 + (spotLight.Atten.Quadratic * pow(length(spotLight.Position - fragPos), 2.0f)));
+						 + (spotLight.Atten.Linear * dist)
+						 + (spotLight.Atten.Quadratic * pow(dist, 2.0f)));
 
 	float theta = dot(lightDir, normalize(-spotLight.Direction));
 	float epsilon = spotLight.InnerCut - spotLight.OuterCut;
@@ -159,7 +167,13 @@ void main()
 		pointResult += calcPoint(points[i], normal, frag_pos, viewDir);
 	}
 
-	vec4 finalLight = dirResult + pointResult + spotResult;
-	
-	out_color = vec4((finalLight).xyz * (objectColor).xyz, 1);
+	float dMax = 50;
+	float dMin = 25;
+	float dist = length(frag_eyePos - frag_pos);
+	float fog = (dMax - dist) / (dMax - dMin);
+	fog = clamp(fog, 0, 1);
+
+	vec4 finalLight = dirResult + pointResult; /*+ spotResult;*/
+	vec3 color = mix(vec3(0.15f, 0.15f, 0.15f), (finalLight).xyz * (objectColor).xyz, fog);	
+	out_color = vec4(color, 1);
 }

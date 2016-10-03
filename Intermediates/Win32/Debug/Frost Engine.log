@@ -1,0 +1,3 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (G:\My Projects\Frost-Project\Intermediates\Win32\Debug\) contains files shared from another project (Frost Platform.vcxproj, Frost Sandbox.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  SOIL.lib(image_DXT.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+  Frost Engine.vcxproj -> G:\My Projects\Frost-Project\output lib\Win32\Debug\Frost Engine_Win32_Debug.lib

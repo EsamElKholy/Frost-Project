@@ -1,0 +1,52 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (G:\My Projects\Frost-Project\Intermediates\Win32\Debug\) contains files shared from another project (Frost Engine.vcxproj, Frost Sandbox.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Unity Build.cpp
+g:\my projects\frost-project\frost platform\source\inputmanager.cpp(81): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\my projects\frost-project\frost platform\source\inputmanager.cpp(82): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\my projects\frost-project\frost platform\source\inputmanager.cpp(87): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\my projects\frost-project\frost platform\source\inputmanager.cpp(88): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\my projects\frost-project\frost platform\source\inputmanager.cpp(90): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\my projects\frost-project\frost platform\source\inputmanager.cpp(91): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\my projects\frost-project\frost platform\source\main.cpp(41): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(44): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(62): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(63): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(66): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(235): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(236): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(237): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(246): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(247): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(248): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(279): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(280): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\main.cpp(281): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\my projects\frost-project\frost platform\source\openglrenderer.cpp(90): warning C4172: returning address of local variable or temporary: renderable
+g:\my projects\frost-project\frost platform\source\openglrenderer.cpp(234): warning C4172: returning address of local variable or temporary: renderable
+g:\my projects\frost-project\frost platform\source\openglrenderer.cpp(133): warning C4172: returning address of local variable or temporary: renderable
+g:\my projects\frost-project\frost platform\source\openglrenderer.cpp(258): warning C4172: returning address of local variable or temporary: lamp
+g:\my projects\frost-project\frost platform\source\openglrenderer.cpp(573): warning C4172: returning address of local variable or temporary
+g:\my projects\frost-project\frost platform\source\openglrenderer.cpp(595): warning C4172: returning address of local variable or temporary
+  SOIL.lib(SOIL.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+Unity Build.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Finished generating code
+glfw3.lib(context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(context.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(init.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(init.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(input.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(input.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(monitor.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(monitor.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(vulkan.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(vulkan.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(window.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(window.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_init.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_init.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_joystick.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_joystick.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_monitor.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_monitor.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_time.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_time.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_tls.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_tls.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_window.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_window.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(wgl_context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(wgl_context.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(egl_context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(egl_context.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glfw.pdb'; linking object as if no debug info
+glew32sd.lib(glew.obj) : warning LNK4099: PDB 'glew_static.pdb' was not found with 'glew32sd.lib(glew.obj)' or at 'G:\My Projects\Frost-Project\bin\Win32\Debug\glew_static.pdb'; linking object as if no debug info
+  Frost Platform.vcxproj -> G:\My Projects\Frost-Project\bin\Win32\Debug\Frost Platform_Win32_Debug.exe
+  Frost Platform.vcxproj -> G:\My Projects\Frost-Project\bin\Win32\Debug\Frost Platform_Win32_Debug.pdb (Partial PDB)

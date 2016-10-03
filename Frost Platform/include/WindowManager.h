@@ -17,6 +17,7 @@ public:
 	static void Render();
 	static void SetClearColor(float r, float g, float b, float a);
 	static void ResetClearColor();
+	static void ClearWindow();
 	static void Destroy();
 	static bool ShouldClose();
 
@@ -28,6 +29,4 @@ private:
 public:
 	static GLFWwindow *Window;
 	static int Width, Height;
-
-private:
 };

@@ -103,7 +103,7 @@ GLShape OpenGLRenderer::CreateQuad(vec3f pos, vec2f size, vec2f texScale, bool w
 	unsigned int indices[6] =
 	{
 		0, 1, 2,
-		2, 0, 3
+		0, 2, 3
 	};
 
 	GLShape shape = CreateShape(vertices, 4, indices, 6, withNormals);
@@ -515,6 +515,24 @@ void OpenGLRenderer::RenderShape(Renderable *renderable, OpenGLShader *shader, S
 	{
 		renderable->Skin.SpecularSkin.UnbindTexture();
 	}
+}
+
+void OpenGLRenderer::RenderScreen(GLShape *screenQuad, Texture *screenBuffer, OpenGLShader *shader, int mode)
+{
+	shader->Activate();	  
+
+	unsigned int loc = glGetUniformLocation(shader->Program, "mode");
+	glUniform1i(loc, mode);
+
+	screenBuffer->BindTexture();
+
+	screenQuad->BindBuffers();
+
+	glDrawElements(GL_TRIANGLES, screenQuad->IndicesCount, GL_UNSIGNED_INT, 0);
+
+	screenQuad->UnbindBuffers();
+
+	screenBuffer->UnbindTexture();
 }
 
 void OpenGLRenderer::Update() 

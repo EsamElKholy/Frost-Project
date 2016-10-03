@@ -78,17 +78,17 @@ void InputManager::Mouse_Position_Callback(GLFWwindow* window, double xPos, doub
 {
 	if (FirstMouse)
 	{
-		MousePos.X = xPos;
-		MousePos.Y = yPos;
+		MousePos.X = (float)xPos;
+		MousePos.Y = (float)yPos;
 
 		FirstMouse = false;
 	}
 
-	MousePosOffset.X = xPos - MousePos.X;
-	MousePosOffset.Y = MousePos.Y - yPos;
+	MousePosOffset.X = (float)xPos - MousePos.X;
+	MousePosOffset.Y = MousePos.Y - (float)yPos;
 
-	MousePos.X = xPos;
-	MousePos.Y = yPos;
+	MousePos.X = (float)xPos;
+	MousePos.Y = (float)yPos;
 }
 
 void InputManager::Scroll_Callback(GLFWwindow *window, double xOffset, double yOffset)
